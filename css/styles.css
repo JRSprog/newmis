@@ -12,7 +12,8 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: #FBFBFB;
+    background-color: white;
+    box-shadow:  2px 0px 2px rgba(0, 0, 0, 0.1);
     color: black;
     padding-top: 20px;
     position: fixed;
@@ -45,6 +46,7 @@ body {
 
 .sidebar .nav-links li a {
     color: black;
+    font-weight: bold;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -59,9 +61,12 @@ body {
 
 .sidebar .nav-links li:hover {
     background-color: #4C3BCF;
-    margin-left: 8px;
-    width: 235px;
-    border-radius: 10px;
+    margin-left: 5px;
+    width: 238px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .sidebar .nav-links li a:hover {
@@ -83,6 +88,7 @@ header {
     align-items: center;
     margin-top: -15px;
     top: 0;
+    position: sticky;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
