@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.050);
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #FBFBFB;
+    color: black;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: -250px;
+    transition: all 0.3s;
+    z-index: 100;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+    width: 100px;
+}
+
+.sidebar .nav-links {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar .nav-links li {
+    padding: 15px 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.sidebar .nav-links li a i:hover {
+    margin-right: 10px;
+    background: none;
+    color: white;
+}
+
+.sidebar .nav-links li:hover {
+    background-color: #4C3BCF;
+    margin-left: 8px;
+    width: 235px;
+    border-radius: 10px;
+}
+
+.sidebar .nav-links li a:hover {
+    color: white;
+}
+
+.main-content {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+    transition: margin-left 0.3s;
+}
+
+header {
+    background-color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+    top: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+header .header-left a {
+    width: 80px;
+    height: 50px;
+    background-color: white;
+    border: none;
+}
+
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a i {
+    margin-right: 10px;
+}
+
+.burger-btn {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    color: gray;
+}
+
+.content {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
+    bottom: 0;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.main-content.active {
+    margin-left: 250px;
+}
+  /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 250px;
+                transition: all 0.3s;
+                position: fixed;
+                height: 100%;
+                top: 0;
+                left: -250px;
+                z-index: 100;
+            }
+
+            .sidebar .nav-links li:hover {
+                background-color: #4C3BCF;
+                margin-left: 8px;
+                width: 225px;
+                border-radius: 10px;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            header {
+                justify-content: space-between;
+            }
+
+            .burger-btn {
+                display: block;
+            }
+
+            .header-right {
+                display: flex;
+                align-items: center;
+            }
+
+            .profile img {
+                width: 30px;
+                height: 30px;
+            }
+
+            .dropdown-content {
+                width: 180px;
+            }
+
+            .overlay {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            header {
+                padding: 10px 20px;
+            }
+
+            .burger-btn {
+                display: flex;
+            }
+        }
+/* Table styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #d3d3d3; /* Gray bottom border */
+  }
+  
+  th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color: #f9f9f9; /* Slight hover effect */
+  }
+  .edit {
+    background-color: mediumblue;
+    padding: 10px;
+    border: none;
+    margin: 3px;
+    color: white;
+    border-radius: 7px;
+  }
+  .edit:hover, .edit i:hover {
+    background-color: greenyellow;
+    color: black;
+  }
+  .delete {
+    background-color: mediumblue;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 7px;
+  }
+  .delete:hover, i:hover {
+    background-color: crimson;
+    color: black;
+  }
+  /* Responsive table */
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    thead {
+      display: none;
+    }
+  
+    tr {
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      background-color: #fff;
+    }
+  
+    td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+    }
+  }

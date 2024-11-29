@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Change the logo tab -->
+    <link rel="shortcut icon" href="images/blogo.png" type="x-icon">
+
+</head>
+<body>
+    
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+            <div class="logo">
+            <img src="images/blogo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#"><i class="fas fa-tachometer-alt">&nbsp;</i>Home</a></li>
+            <li><a href="#"><i class="fas fa-chart-line">&nbsp;</i>Outgoing Fees Reports</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <button id="burgerBtn" class="burger-btn">☰</button>
+            </div>
+            <div class="header-right">
+                <div class="profile">
+                    <img src="images/blogo.png" alt="Profile" class="profile-img">
+                    <div class="dropdown">
+                        <button class="dropbtn">Logged in as BCP <span>&#x25BC;</span></button>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user-circle"></i> Profile</a>
+                            <a href="#"><i class="fas fa-cogs"></i> Settings</a>
+                            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header><br><br>
+
+        <!-- Dashboard Content -->
+        <div class="content">
+            <h1>Ongoing Payment</h1>
+            <table class="responsive-table">
+                <thead>
+                  <tr>
+                    <th>Name Payment</th>
+                    <th>Details</th>
+                    <th>Amount</th>
+                    <th>Deadline</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tour</td>
+                    <td>1st year: zambales, 
+                        2nd year: bicol, 
+                        3rd year: bataan, 
+                        4th year: boracay
+                    </td>
+                    <td>1st year: 5,500, 
+                        2nd year: 6,500, 
+                        3rd year: 8,050, 
+                        4th year: 15,500</td>
+                    <td>1st year: 1/18/2025, 
+                        2nd year: 1/20/2025, 
+                        3rd year: 1/24/2025, 
+                        4th year: 1/30/2025</td>
+                    <td><button class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
+                  </tr>
+                  <tr>
+                    <td>Miscellaneous</td>
+                    <td>This a student school balance and it will be updated according to the date of your paid</td>
+                    <td>4,475</td>
+                    <td>1/15/2025</td>
+                    <td><button class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
+                  </tr>
+                  <tr>
+                    <td>Stage Play</td>
+                    <td>this stage play, the payment will be added to the Miscellaneous balance and it will be perform in sm north edsa</td>
+                    <td>350</td>
+                    <td>3/15/205</td>
+                    <td><button class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
+                  </tr>
+                  <tr>
+                    <td>Researh Forum</td>
+                    <td>Reseach forum will discuss the ai fundamentals to explore the different types of ai </td>
+                    <td>250</td>
+                    <td>2/4/2025</td>
+                    <td><button class="edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="delete"><i class="fa-solid fa-trash"></i></button></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Bestlink College of the Philippines, All Rights Reserved SMS.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle sidebar
+        document.getElementById('burgerBtn').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.querySelector('.main-content').classList.toggle('active');
+        });
+
+    </script>
+
+</body>
+</html>
