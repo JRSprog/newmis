@@ -12,9 +12,9 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: white;
+    background-color: black;
     box-shadow:  2px 0px 2px rgba(0, 0, 0, 0.1);
-    color: black;
+    color: white;
     padding-top: 20px;
     position: fixed;
     height: 100%;
@@ -45,7 +45,7 @@ body {
 }
 
 .sidebar .nav-links li a {
-    color: black;
+    color: white;
     font-weight: bold;
     text-decoration: none;
     display: flex;
@@ -82,7 +82,7 @@ body {
 
 header {
     background-color: white;
-    padding: 20px 30px;
+    padding: 30px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,77 +92,18 @@ header {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-header .header-left a {
+header .header-left button  {
     width: 80px;
-    height: 50px;
     background-color: white;
     border: none;
 }
 
-header .header-right {
-    display: flex;
-    align-items: center;
+.header-left p {
+    margin-left: 30px;
+    font-size: 27px;
+    margin-top: -25px;
 }
 
-.profile {
-    display: flex;
-    align-items: center;
-}
-
-.profile img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background-color: transparent;
-    border: none;
-    color: #333;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.dropbtn:hover {
-    background-color: #ddd;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    top: 100%;
-    right: 0;
-}
-
-.dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a i {
-    margin-right: 10px;
-}
 
 .burger-btn {
     background: none;
@@ -174,12 +115,12 @@ header .header-right {
     height: 25px;
     cursor: pointer;
     font-size: 20px;
-    color: gray;
+    color: black;
+    font-weight: bold;
 }
 
 .content {
     padding: 20px;
-    background-color: #fff;
     margin-top: 20px;
     border-radius: 5px;
 }
@@ -192,6 +133,7 @@ footer {
     margin-top: 20px;
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.1);
     bottom: 0;
+   
 }
 
 footer p {
@@ -276,78 +218,65 @@ footer p {
                 display: flex;
             }
         }
-/* Table styling */
-table {
-    width: 100%;
-    margin-top: 20px;
-    border-collapse: collapse;
-    background-color: white;
-  }
-  
-  th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #d3d3d3; /* Gray bottom border */
-  }
-  
-  th {
-    background-color: #f8f8f8;
+/* dashboard content */
+/* Main container as Flexbox */
+#child-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
+    gap: 20px; /* Space between cards */
+    justify-content: left; /* Center the items horizontally */
+    margin-left: 60px;
+}
+
+/* Style for each payment card */
+.payment-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    flex: 1 1 calc(50% - 20px); /* Ensure at least two cards per row with space */
+    max-width: 600px; /* Prevent cards from growing too large */
+    min-width: 320px; /* Ensure cards don’t get too small */
+}
+
+.payment-card p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.payment-card p strong {
     font-weight: bold;
-  }
-  
-  tr:hover {
-    background-color: #f9f9f9; /* Slight hover effect */
-  }
-  .edit {
-    background-color: mediumblue;
+}
+
+.payment-card textarea {
+    width: 100%;
+    height: 120px;
+    margin-top: -5px;
     padding: 10px;
-    border: none;
-    margin: 3px;
-    color: white;
-    border-radius: 7px;
-  }
-  .edit:hover, .edit i:hover {
-    background-color: greenyellow;
-    color: black;
-  }
-  .delete {
-    background-color: mediumblue;
-    padding: 10px;
-    border: none;
-    color: white;
-    border-radius: 7px;
-  }
-  .delete:hover, i:hover {
-    background-color: crimson;
-    color: black;
-  }
-  /* Responsive table */
-  @media (max-width: 768px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
-    }
-  
-    thead {
-      display: none;
-    }
-  
-    tr {
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      padding: 10px;
-      background-color: #fff;
-    }
-  
-    td {
-      text-align: right;
-      padding-left: 50%;
-      position: relative;
-    }
-  
-    td::before {
-      content: attr(data-label);
-      position: absolute;
-      left: 10px;
-      font-weight: bold;
-    }
-  }
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: none;
+    background-color: #f9f9f9;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Styling for 'Amount' and 'Date' */
+.payment-card p:last-child {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.payment-card textarea[readonly] {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+/* Alternate background color for every second card */
+.payment-card:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
