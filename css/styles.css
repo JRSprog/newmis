@@ -109,9 +109,9 @@
 
         header .header-left p {
             font-size: 27px;
-            margin-top: 0;
             font-weight: bold;
             margin-top: -25px;
+            margin-left: 30px;
         }
 
         .burger-btn {
