@@ -224,8 +224,7 @@ footer p {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap onto new lines */
     gap: 20px; /* Space between cards */
-    justify-content: left; /* Center the items horizontally */
-    margin-left: 60px;
+    justify-content: center; /* Center the items horizontally */
 }
 
 /* Style for each payment card */
