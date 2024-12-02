@@ -110,7 +110,8 @@
         header .header-left p {
             font-size: 27px;
             font-weight: bold;
-            margin-top: 20px;
+            margin-top: 15px;
+            margin-left: -20px;
         }
 
         .burger-btn {
