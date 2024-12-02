@@ -194,7 +194,21 @@ footer p {
 
         @media (max-width: 480px) {
             .sidebar {
-                width: 200px;
+                width: 210px;
+            }
+
+            .sidebar .nav-links li:hover {
+                background-color: #4C3BCF;
+                margin-left: 5px;
+                width: 228px;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+            }
+
+            .sidebar .nav-links li a {
+                font-size: 10px;
             }
 
             header {
