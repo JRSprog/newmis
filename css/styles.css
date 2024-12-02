@@ -1,4 +1,4 @@
- * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -77,24 +77,40 @@
         /* Header styles */
         header {
             background-color: white;
-            padding: 30px 40px;
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        header .header-left {
+            display: flex;
+            align-items: center;
         }
 
         header .header-left button {
-            width: 80px;
+            width: 40px;
+            height: 40px;
             background-color: white;
             border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+            margin-right: 15px;
         }
 
         header .header-left p {
-            margin-left: 30px;
             font-size: 27px;
+            margin-top: 0;
+            font-weight: bold;
         }
 
         .burger-btn {
@@ -145,21 +161,30 @@
                 flex-direction: column;
             }
 
+            header {
+                padding: 10px 20px;
+                justify-content: space-between;
+            }
+
+            header .header-left {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 10px;
+            }
+
+            header .header-left p {
+                font-size: 22px;
+                margin-top: 5px;
+            }
+
             .sidebar {
                 width: 250px;
-                transition: all 0.3s;
                 position: fixed;
                 height: 100%;
                 top: 0;
                 left: -250px;
                 z-index: 100;
-            }
-
-            .sidebar .nav-links li:hover {
-                background-color: #4C3BCF;
-                margin-left: 8px;
-                width: 225px;
-                border-radius: 10px;
             }
 
             .sidebar.active {
@@ -170,30 +195,16 @@
                 margin-left: 0;
             }
 
-            header {
-                justify-content: space-between;
-            }
-
             .burger-btn {
                 display: block;
+                color: black;
             }
 
-            .header-right {
-                display: flex;
-                align-items: center;
-            }
-
-            .profile img {
-                width: 30px;
-                height: 30px;
-            }
-
-            .dropdown-content {
-                width: 180px;
-            }
-
-            .overlay {
-                display: block;
+            .sidebar .nav-links li:hover {
+                background-color: #4C3BCF;
+                margin-left: 8px;
+                width: 225px;
+                border-radius: 10px;
             }
         }
 
