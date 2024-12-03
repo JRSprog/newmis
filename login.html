@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login Form - HTML CSS</title>
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome CDN for icons (optional, but if you're using FontAwesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Change the logo tab -->
     <link rel="shortcut icon" href="images/blogo.png" type="x-icon">
     <link rel="stylesheet" href="css/login.css">
+    
+    <!-- Loading Spinner CSS -->
+    <style>
+        /* Basic loading spinner styles */
+        .spinner {
+            border: 4px solid transparent;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+            display: none; /* Initially hidden */
+        }
+
+        /* Spinner animation */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Style for the button when loading */
+        .loading {
+            pointer-events: none; /* Disable button clicks while loading */
+            opacity: 0.7; /* Dim the button while loading */
+        }
+    </style>
 </head>
 <body>
     <div class="login-form">
@@ -17,7 +44,7 @@
             <div class="main">
                 <div class="content">
                     <h2>Log In</h2>
-                    <form action="#" method="post">
+                    <form id="loginForm" action="#" method="post">
                         <!-- Username input with icon inside -->
                         <div class="input-container">
                             <i class="fa-solid fa-user"></i> <!-- Bootstrap Icon for user -->
@@ -28,7 +55,11 @@
                             <i class="fa-solid fa-lock"></i> <!-- Bootstrap Icon for lock -->
                             <input type="password" name="password" placeholder="Student Password" required>
                         </div>
-                        <button class="btn" type="submit"><a href="index.html">Login</a></button>
+                        <!-- Login button with a spinner -->
+                        <button id="loginBtn" class="btn" type="submit">
+                            Login
+                            <span id="spinner" class="spinner"></span> <!-- Hidden spinner -->
+                        </button>
                     </form>
                     <a href="#">Forgot Password?</a>
                 </div>
@@ -38,5 +69,28 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // JavaScript to show the spinner and simulate form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting immediately
+            
+            // Show spinner and disable button
+            var spinner = document.getElementById('spinner');
+            var loginBtn = document.getElementById('loginBtn');
+            
+            spinner.style.display = 'inline-block';  // Show spinner
+            loginBtn.classList.add('loading');       // Disable button
+            
+            // Simulate an async task like an API call or validation
+            setTimeout(function() {
+                // After the "loading" is done, hide spinner and enable button again
+                spinner.style.display = 'none'; 
+                loginBtn.classList.remove('loading'); 
+                // Here you can submit the form or redirect after a successful "login"
+                window.location.href = 'index.html'; // Redirect after login (for example)
+            }, 1000); // Simulated delay (change as needed)
+        });
+    </script>
 </body>
 </html>
