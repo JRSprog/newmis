@@ -12,6 +12,11 @@
 
 </head>
 <body>
+
+     <!-- Loading Spinner -->
+     <div id="loading">
+        <div class="loader"></div>
+    </div>
     
     <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
@@ -32,21 +37,35 @@
                 <button id="burgerBtn" class="burger-btn">☰</button>
                 <p>Dashboard</p>
             </div>
-        </header><br><br>
+        </header><br>
 
         <!-- Dashboard Content -->
         <div class="content">
+            <h2>Ongoing Fees Payment</h2>
+
           <div id="child-container">
             <div class="payment-card">
                 <p><strong>Name of Payment:</strong> Tour</p>
                 <p><strong>Details:</strong></p>
-                <textarea readonly>
+                <textarea>
                     fdfdfdfdgfgfdgfjghfghfjgkfjgkfghfghfgfhgjfhguhfghfdjghfghdfhg
                 </textarea>
-                <p><strong>Amount:</strong> $5455</p>
+                <p><strong>Amount:</strong> ₱ 5,455</p>
                 <p><strong>Date:</strong> 09/33/2026</p>
+                <button class="edit"><i class="fa-solid fa-pen-to-square"></i>
+                </button><button class="delete"><i class="fa-solid fa-trash"></i></button>
             </div>
-            <div class="payment-card"></div>
+            <div class="payment-card">
+                <p><strong>Name of Payment:</strong> Tour</p>
+                <p><strong>Details:</strong></p>
+                <textarea>
+                    fdfdfdfdgfgfdgfjghfghfjgkfjgkfghfghfgfhgjfhguhfghfdjghfghdfhg
+                </textarea>
+                <p><strong>Amount:</strong> ₱ 5,455</p>
+                <p><strong>Date:</strong> 09/33/2026</p>
+                <button class="edit"><i class="fa-solid fa-pen-to-square"></i>
+                </button><button class="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
             <div class="payment-card"></div>
         </div> 
         </div><br><br><br><br><br><br>
@@ -62,6 +81,12 @@
         document.getElementById('burgerBtn').addEventListener('click', function() {
             document.getElementById('sidebar').classList.toggle('active');
             document.querySelector('.main-content').classList.toggle('active');
+        });
+         // Hide the loading screen after 2 seconds (simulating loading)
+         window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading').style.display = 'none';
+            }, 3000); // Change the duration (in ms) as needed
         });
     </script>
 </body>
