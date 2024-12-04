@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Change the logo tab -->
+    <link rel="shortcut icon" href="images/blogo.png" type="x-icon">
+
+</head>
+<body>
+
+     <!-- Loading Spinner -->
+     <div id="loading">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+            <div class="logo">
+            <img src="images/blogo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#"><i class="fas fa-tachometer-alt">&nbsp;</i>Home</a></li>
+            <li><a href="index.html"><i class="fas fa-chart-line">&nbsp;</i>Outgoing Fees Reports</a></li>
+            <li><a href="#"><i class="fa-solid fa-clipboard-list">&nbsp;</i>Student Infomartion</a></li>
+            <li><a href="#"><i class="fa-solid fa-file-invoice">&nbsp;</i>Student Payment Records</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <div class="header-left">
+                <button id="burgerBtn" class="burger-btn">☰</button>
+                <p>Dashboard</p>
+            </div>
+        </header><br>
+
+        <!-- Dashboard Content -->
+        <div class="content">
+            <h2>Student Information</h2>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Student ID</th>
+                    <th>Lastname</th>
+                    <th>Firstname</th>
+                    <th>Middlename</th>
+                    <th>Birthday</th>
+                    <th>Age</th>
+                    <th>Address</th>
+                    <th>Phone number</th>
+                    <th>Course/Year level</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Name">s21016623</td>
+                    <td data-label="Age">Daez</td>
+                    <td data-label="City">Vincent</td>
+                    <td>Ang</td>
+                    <td>09/9/2002</td>
+                    <td>22</td>
+                    <td>23camarin caloocan city</td>
+                    <td>09545565656</td>
+                    <td>BSIT - 4th year</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">s21016623</td>
+                    <td data-label="Age">Daez</td>
+                    <td data-label="City">Vincent</td>
+                    <td>Ang</td>
+                    <td>09/9/2002</td>
+                    <td>22</td>
+                    <td>23camarin caloocan city</td>
+                    <td>09545565656</td>
+                    <td>BSIT - 4th year</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Name">s21016623</td>
+                    <td data-label="Age">Daez</td>
+                    <td data-label="City">Vincent</td>
+                    <td>Ang</td>
+                    <td>09/9/2002</td>
+                    <td>22</td>
+                    <td>23camarin caloocan city</td>
+                    <td>09545565656</td>
+                    <td>BSIT - 4th year</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Bestlink College of the Philippines || All Rights Reserved SMS.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle sidebar
+        document.getElementById('burgerBtn').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.querySelector('.main-content').classList.toggle('active');
+        });
+         // Hide the loading screen after 2 seconds (simulating loading)
+         window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading').style.display = 'none';
+            }, 3000); // Change the duration (in ms) as needed
+        });
+    </script>
+</body>
+</html>
