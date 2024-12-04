@@ -7,11 +7,11 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.050);
+    background-color: #B7B7B7;
 }
 
 .sidebar {
-    width: 250px;
+    width: 270px;
     background-color: black;
     box-shadow:  2px 0px 2px rgba(0, 0, 0, 0.1);
     color: white;
@@ -19,7 +19,7 @@ body {
     position: fixed;
     height: 100%;
     top: 0;
-    left: -250px;
+    left: -270px;
     transition: all 0.3s;
     z-index: 100;
 }
@@ -62,7 +62,7 @@ body {
 .sidebar .nav-links li:hover {
     background-color: #4C3BCF;
     margin-left: 5px;
-    width: 238px;
+    width: 260px;
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -359,3 +359,56 @@ footer p {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #444; /* Dark border for table */
+    color: white;
+  }
+
+  th {
+    background-color: #222; /* Darker background for table headers */
+  }
+
+  tr:nth-child(even) {
+    background-color: #333; /* Light gray for even rows */
+  }
+
+  tr:nth-child(odd) {
+    background-color: #111; /* Darker background for odd rows */
+  }
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    table {
+      width: 100%;
+      border: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      display: block;
+      text-align: right;
+      border: none;
+      padding: 10px;
+    }
+
+    td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: inline-block;
+      width: 40%;
+    }
+
+    th {
+      display: none;
+    }
+  }
