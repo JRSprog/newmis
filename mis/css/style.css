@@ -1,0 +1,280 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: aliceblue;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  z-index: 2;
+  position: relative;
+  box-shadow: 1px 4px 15px 1px rgba(0,0,0,0.2);
+  width: calc(100% - 40px);
+  margin: 10px auto 0;
+  top: 0;
+  position: sticky;
+  border-radius: 8px;
+}
+
+.burger-button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.dropdown {
+  position: relative;
+  margin-left: auto;
+}
+
+.dropdown-button {
+  background: none;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-button i {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333;
+  min-width: 130px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 1px 0 0 1px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+  padding-top: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.close {
+  color: black;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.sidebar-image {
+  width: 40%;
+  height: auto;
+  margin: 0 auto 10px;
+  display: block;
+}
+
+.sidebar-text {
+  font-size: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar-item {
+  color: black !important;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+}
+
+.sidebar-item:hover {
+  background-color: #6439FF;
+  border-radius: 8px;
+  color: white !important;
+}
+
+.sidebar .icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.close-sidebar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Overlay for sidebar */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  header {
+    padding: 12px 15px;
+  }
+  
+  .dropdown-button {
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    width: calc(100% - 30px);
+    margin: 8px auto 0;
+    padding: 10px 15px;
+  border-radius: 5px;
+  }
+  
+  .burger-button {
+    font-size: 28px;
+  }
+  
+  .dropdown-button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  
+  .sidebar {
+    width: 70%;
+    left: -100%;
+  }
+  
+  .sidebar-item {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    width: calc(100% - 20px);
+    margin: 5px auto 0;
+    padding: 8px 10px;
+  }
+  
+  .burger-button {
+    font-size: 24px;
+  }
+  
+  .dropdown-content {
+    min-width: 120px;
+  }
+  
+  .dropdown-content a {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .sidebar {
+    width: 85%;
+  }
+  
+  .sidebar-item {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  .close-sidebar {
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 400px) {
+  .sidebar {
+    width: 90%;
+  }
+  
+  .sidebar-item {
+    padding: 8px 12px;
+  }
+  
+  .sidebar .icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+}

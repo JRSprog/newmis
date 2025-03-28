@@ -1,0 +1,203 @@
+.content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error, .success {
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 480px) {
+    .content {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="password"], button[type="submit"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/****** para balanve iot okeee*******/
+/* Main Content Styling */
+.maincontent {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Balance Display */
+.kulang {
+    padding: 10px;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+.kulang h8 {
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.kulang h9 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .maincontent {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .kulang h8 {
+        font-size: 14px;
+    }
+
+    .kulang h9 {
+        font-size: 20px;
+    }
+}
+
+/* Style for the "Balance Overview" button */
+.view {
+    background: linear-gradient(135deg, #007bff, #00c6ff); /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    margin-top: 20px;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+
+  .view:hover {
+    background: linear-gradient(159deg, rgba(0,51,102,1) 0%, rgba(15,82,186,1) 100%);; /* Darker green on hover */
+  }
+
+  /* Table Styling */
+  .tableb {
+    margin-top: 20px; /* Space above the table */
+    width: 100%; /* Full width */
+    overflow-x: auto; /* Horizontal scroll for small screens */
+    display: none; /* Initially hidden */
+  }
+
+  table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+    background-color: white; /* White background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  th, td {
+    padding: 12px 15px; /* Padding for cells */
+    text-align: left; /* Left-align text */
+    border-bottom: 1px solid #ddd; /* Bottom border for rows */
+  }
+
+  th {
+    background: linear-gradient(159deg, rgba(0,51,102,1) 0%, rgba(15,82,186,1) 100%);; /* Green background for headers */
+    color: white; /* White text for headers */
+    font-weight: bold; /* Bold text */
+  }
+
+  tr:hover {
+    background-color: #f5f5f5; /* Light grey background on row hover */
+  }
+
+  /* Responsive Table */
+  @media (max-width: 600px) {
+    table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
